@@ -19,18 +19,18 @@ exports.run = async (client, message, args) => {
     if(!member)
       return message.reply(erro);
     if(!member.bannable) 
-      return message.reply("Eu não posso expulsar este usuário! Ele tem um cargo mais alto ou eu não tenho permissões de banir?");
+      return message.reply("\<:fechar:745286345361981482> | Não tenho permissão para banir alguém superior a mim!");
     let reason = args.slice(1).join(' ');
-    if(!reason) reason = "Razão não fornecida";
+    if(!reason) reason = "\<:exclamacao:745286346641375283> | Razão não fornecida";
   
   let embedi = new Discord.MessageEmbed()
 
-        .setTitle(`:warning: BaNiDo :warning:`)
-        .setFooter(`Você foi banido do ImpérioGeek pelo Staff: ${message.author.username}, Tenha um bom dia!`)
+        .setTitle(`:warning: G-Force Community`)
+        .setFooter(`\<:seta1:745286347723374672> | Você foi banido da G-Force Community por ${message.author.username}`)
       
     await member.send(embedi)
     await member.ban(reason)
-      .catch(error => message.reply(`${message.author} não consegui banir o membro devido o : ${error}`));
+      .catch(error => message.reply(`\<:notificacao:745286344615395428> | Não consegui banir o usuário mencionado: ${error}`));
   
       let embed = new Discord.MessageEmbed()
         .setTitle("🚫 Império Banimentos 🚫", message.author.avatarURL)

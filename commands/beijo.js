@@ -3,7 +3,7 @@ const superagent = require('superagent')
 
 exports.run = async (client, message, args) => {
     let membro2 = message.mentions.members.first()
-    if (!membro2) message.channel.send('Você não mencionou um membro');
+    if (!membro2) message.channel.send('\<:exclamacao:745286346641375283> | Você não mencionou um membro');
 
     const {body} = await superagent
        .get(`https://nekos.life/api/v2/img/kiss`)

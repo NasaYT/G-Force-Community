@@ -15,11 +15,11 @@ exports.run = (client, message, args) => {
   
   var sugestao = args.slice(0).join(' '); // Uma variável, contendo tudo o que o usuário escrever
   if (!sugestao) { // Caso o usuário não escreva nada, iremos avisar que ele necessita
-    return message.reply(`você precisa escrever algo`)
+    return message.reply(`\<:exclamacao:745286346641375283> | Você precisa digitar alguma coisa!`)
   } else { // Caso ele escreva, iremos enviar a sugestão para o canal
       let embed = new Discord.MessageEmbed()
         .setTitle(`ANÚNCIO`)
-        .setDescription(`:bust_in_silhouette: Autor: ${message.author}\n\n${sugestao}\n\n${ff}`)
+        .setDescription(`:bust_in_silhouette: Autor: ${message.author}\n\n${sugestao}\n`)
         .setColor('RANDOM')
         .setThumbnail('https://images-ext-2.discordapp.net/external/tL5BVyen0UWHbm-_2prjaEpjBfWHWFz3qJG8TCsX6ig/https/i.imgur.com/wpn00zx.gif?width=645&height=645')
        

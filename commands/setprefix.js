@@ -6,14 +6,13 @@ exports.run = async (client, message, args) => {
 
   let erro = new Discord.MessageEmbed()
 
-  .setTitle(`❓ INFORMAÇÃO DO COMANDO`)
-  .setDescription(`\`setprefix\` - Troque o prefixo do bot`)
-  .addField(`:hammer: **Uso**`, `\`${c.prefix}setprefix [algumatecla] \``)
-  .addField(`:book: **Exemplo**`, `\`${c.prefix}setprefix ;\``)
-  .addField(`:bookmark: **Permissão**`, `\`ADMINISTRATOR\``)
-  .setColor('#8c0046')  
+  .setTitle(`PREFIXO`)
+  .setDescription(`\<:fechar:745286345361981482> | Você precisa setar um prefixo válido!`)
+  .setColor("#FF4040")
+  .setFooter(`Autor: ${message.author.username}`)
 
-  if(!message.member.permissions.has("ADMINISTRATOR")) return message.reply("você não possui permissão para alterar o prefixo")
+  if (!message.member.permissions.has('ADMINISTRATOR') && message.member.id !== '487965837404274689')
+  return message.reply("\<:aviso1:745286341339906049> | Você não possui permissão para alterar o prefixo");
   if (!args[0] || args[0 == "help"]) return message.channel.send(erro)
 
   let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
@@ -27,11 +26,11 @@ exports.run = async (client, message, args) => {
   });
 
   let embed = new Discord.MessageEmbed()
-    .setColor("RANDOM").setTimestamp()
-    .setTitle("Prefixo Alterado com Sucesso")
-    .setDescription(`O Prefixo foi alterado para: ${args[0]}`);
+  .setTitle(`PREFIXO`)
+  .setDescription(`\<:tick:745286349128597645> | O Prefixo foi alterado para: ${args[0]}`)
+  .setColor("#00FF00")
+  .setFooter(`Autor: ${message.author.username}`)
 
-    message.channel.send(embed)
 }
 
 exports.help = {

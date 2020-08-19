@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     let output = args.join(' ');
     if (!output)
         return message.channel.send(new discord.MessageEmbed()
-            .setTitle('Uso incorreto do comando.')
+            .setTitle('\<:exclamacao:745286346641375283> | Uso incorreto do comando.')
             .setDescription("``" + `${c.prefix}${this.help.name} [${this.help.arg}]` + "``")
             .setColor("#FF0000"));
 
@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
         return message.delete()
     } catch (e) {
         return message.channel.send(new discord.MessageEmbed()
-            .setTitle('Ocorreu um erro ao enviar a mensagem.')
+            .setTitle('\<:fechar:745286345361981482> | Ocorreu um erro ao enviar a mensagem.')
             .setColor('#FF0000'));
     }
 

@@ -6,8 +6,8 @@ exports.run = async (client, message, args) => {
 
     let TicketEmbed = new Discord.MessageEmbed()
     .setColor("#cd3")
-    .setAuthor("TICKET")
-    .setDescription("Confirme a criação do seu ticket clicando na reação abaixo.")
+    .setAuthor(" TICKET")
+    .setDescription("\<:notificacao:745286344615395428> | Confirme a criação do seu ticket clicando na reação abaixo.")
     .setFooter("G-Force Community - Ticket")
 
     message.channel.send(TicketEmbed).then(async msg => {

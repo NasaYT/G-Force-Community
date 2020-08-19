@@ -41,5 +41,5 @@ exports.run = (client, message, args) => {
 
 exports.help = {
     name: "serverinfo",
-    aliases: ['serverinfo', 'server']
+    aliases: ['serverinfo', 'infoserver']
 }

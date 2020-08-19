@@ -24,9 +24,10 @@ client.on("ready", () => {
   //client.user.setActivity(`G-Force Community\nBy: uGabriel#2193`);
   //
   var tabela = [
-    {name: 'G-Force Community - https://discord.gg/dyPAPG', type:'PLAYING'},
+    {name: '[LEAKS] G-Force Community - https://discord.gg/dyPAPG', type:'PLAYING'},
     {name: 'Criado por uGabriel#2193', type: 'LISTENING'},
     {name: 'Veja meus comandos: /ajuda', type: 'WATCHING'},
+    {name: 'V1 -> V2'}
   ];
 
   function setStatus() {
@@ -71,8 +72,8 @@ let command =
 if (command) {
   command.run(client, message, args);
 } else {
-  message.reply(
-    `não reconheci esse comando :thinking:`
+  message.channel.send(
+    `\<:barreira:745286341755011173> | Este comando não foi encontrado.`
   );
 }
 });
@@ -210,59 +211,21 @@ client.on('messageReactionAdd', async (reaction, user) => {
     }
   })
   //
-  // DESCRIÇÃO SALA - https://prnt.sc/ss4lnu
-  //
-    client.on('guildMemberRemove', member => {
-        let myGuild = client.guilds.cache.get('710215816867610654');
-        let memberCountChannel = myGuild.channels.cache.get('717250126053244989') 
-        let memberCount = memberCountChannel.guild.memberCount;
-        memberCountChannel.setTopic(`**§ MEMBROS: ${memberCount} §**`)
-        .catch(error => console.log(error))
-    })
-    client.on('guildMemberAdd', member => {
-        let myGuild = client.guilds.cache.get('710215816867610654');
-        let memberCountChannel = myGuild.channels.cache.get('717250126053244989') 
-        let memberCount = memberCountChannel.guild.memberCount;
-        memberCountChannel.setTopic(`**§ MEMBROS: ${memberCount} §**`)
-        .catch(error => console.log(error))
-    })
-  //
   // BOAS VINDAS
   //
 
     client.on('guildMemberAdd', membro => {
-        var canal = client.channels.cache.get("710219849640706142");
-        let embedi = new Discord.MessageEmbed()
-        
-        .setTitle(`${membro.user.tag} **| Bem-vindo(a)!**`) 
-        .setDescription(`✨ Olá, seja muito bem vindo(a) ao **IMPÉRIOGEEK**!`) 
-        .setThumbnail(membro.user.displayAvatarURL())
-        .setColor('GREEN') 
-        .addFields(
-            { name: '👋 Sabia que...', value: `Você é o ${membro.guild.memberCount}° membro aqui no servidor?`, inline: true},
-            { name: '🛡️ Tag do Usuário', value: `\`${membro.user.tag}\` (${membro.id})`, inline: true },
-            { name: '📛 Precisando de ajuda?', value: 'Caso você tenha alguma dúvida ou problema, chame alguém da staff ou vá ao #⸨📦⸩votação-e-sugestão!', inline: true },
-            { name: '👮 Evite punições!', value: `Leia as nossas #⸨:scroll:⸩regras para evitar ser punido no servidor!`, inline: false }
-        )
-        .setFooter('IMPÉRIO GEEK • © Todos os direitos reservados.')
-        //.addField(`**SOBRE**`, `:busts_in_silhouette: Usuários: \`${membro.guild.memberCount}\`\n<:DL_github:693136690801410178> Repositório: [Discord-Lab](https://github.com/young-js) \n<:DL_twitter:693132106255040671> Twitter: [@Discord_Lab](https://twitter.com/Discord_Lab)`)
-        
-        canal.send(`${membro}`, embedi)
-    });
-
-    client.on('guildMemberRemove', membro => {
-        var canal = client.channels.cache.get("710219849640706142");
-        
+        var canal = client.channels.cache.get("697507836778905652");
         let embed = new Discord.MessageEmbed()
         
-        .setAuthor(membro.user.tag, membro.user.displayAvatarURL())
-        .setDescription(`\n **😭 #chateado!** \n **⚰️ ${membro.displayName}** saiu do servidor...`)
+        .setTitle(`\<:notificacao:745286344615395428> | ${membro.user.tag} **seja bem-vindo!**`) 
+        .setDescription(`\<:nitro:745286345366306976> | Olá, seja muito bem vindo(a) ao **G-Force Community**!`) 
         .setThumbnail(membro.user.displayAvatarURL())
-        .setColor('RED')
-        .setFooter(`ID do Usuário: ${membro.id}`)
-    
+        .setColor('GREEN') 
+        .setFooter('G-Force Community • © Todos os direitos reservados.')
+        //.addField(`**SOBRE**`, `:busts_in_silhouette: Usuários: \`${membro.guild.memberCount}\`\n<:DL_github:693136690801410178> Repositório: [Discord-Lab](https://github.com/young-js) \n<:DL_twitter:693132106255040671> Twitter: [@Discord_Lab](https://twitter.com/Discord_Lab)`)
+        
         canal.send(embed)
-    
     });    
   //
   // SISTEMA DE TICKET
@@ -319,12 +282,12 @@ client.on("messageReactionAdd", (reaction, user) => {
                         READ_MESSAGE_HISTORY: true
                     })
   
-                    chan.updateOverwrite(message.guild.roles.cache.find(x => x.name === "❪★❱Equipe Administrativa❪★❱"), {
+                    chan.updateOverwrite(message.guild.roles.cache.find(x => x.name === "Moderador"), {
                         VIEW_CHANNEL: true,
                         SEND_MESSAGES: true
                     })
               
-                    chan.updateOverwrite(message.guild.roles.cache.find(s => s.name === "✧ ✧❱ᄽ»Suporte«ᄽ❰✧ ✧"), {
+                    chan.updateOverwrite(message.guild.roles.cache.find(s => s.name === "Ajudante"), {
                               VIEW_CHANNEL: true,
                               SEND_MESSAGES: true
                           })
@@ -340,7 +303,8 @@ client.on("messageReactionAdd", (reaction, user) => {
                   let embedTicketOpen = new Discord.MessageEmbed()
                   .setTitle("Ticket Suporte,")
                   .setColor("#cd3")
-                  .setDescription("Digite sua pergunta / mensagem abaixo")
+                  .setDescription("No ticket, você poderá conversar em particular com algum membro da equipe\nCom isso, você terá mais privacidade e poderá ficar a vontade!\n\nPara fechar um ticket, reaja em :unlock:")
+                  .setFooter("G-Force Community")
 
                   chan.send(embedTicketOpen).then( async msg => {
                       await msg.react("🔒")
@@ -352,7 +316,7 @@ client.on("messageReactionAdd", (reaction, user) => {
 
             case "🔒":
 
-            message.channel.send("**A sala fecha em 10 segundos ...**")
+            message.channel.send("**O ticket será fechado em 10 segundos.**")
 
             setTimeout(() => {
                 message.channel.delete()
@@ -361,7 +325,7 @@ client.on("messageReactionAdd", (reaction, user) => {
             let embedTicketClose = new Discord.MessageEmbed()
             .setTitle(`O Ticket ${message.channel.name} foi fechado`)
             .setColor("#cd3")
-            .setFooter("Aviso de fechamento de ticket")
+            .setFooter("G-Force Community")
 
             break;
         }

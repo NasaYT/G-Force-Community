@@ -3,18 +3,18 @@ const Discord = require('discord.js')
 exports.run = async (client, message, args) => {
     if (!message.member.hasPermission("MANAGE_ROLES")) {
         return message.channel.send(
-          "Você não tem permissão!"
+          "\<:fechar:745286345361981482> | Você precisa da permissão MANAGE_ROLES para usar este comando."
         );
       }
   
       if (!message.guild.me.hasPermission("MANAGE_ROLES")) {
-        return message.channel.send("Sem permissões");
+        return message.channel.send("\<:fechar:745286345361981482> | Você precisa da permissão MANAGE_ROLES para usar este comando.");
       }
       const user = message.mentions.members.first();
 
         if (!user) {
         return message.channel.send(
-            "Mencione um usuário para desmutar"
+            "\<:exclamacao:745286346641375283> | Você precisa mencionar um usuário para ser desmutado."
         );
         }
 
@@ -22,7 +22,7 @@ exports.run = async (client, message, args) => {
     
     
     if(user.roles.cache.has(muterole)) {
-        return message.channel.send("Este usuário não está mutado")
+        return message.channel.send("\<:fechar:745286345361981482> | Este usuário não está mutado")
         }
 
         user.roles.remove(muterole)
@@ -38,7 +38,7 @@ exports.run = async (client, message, args) => {
                 
                 client.channels.cache.get('712451499564728380').send(embed)
     
-                user.send(`Você foi desmutado do **${message.guild.name}**`)
+                user.send(`\<:tick:745286349128597645> | Você foi desmutado do **${message.guild.name}**`)
         }
 
 exports.help = {

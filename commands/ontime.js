@@ -34,9 +34,8 @@ let week = 0;  // variavel para definir semanas
 
  let embed = new Discord.MessageEmbed()
  .setColor('#FFFF')
- .setTitle('Tempo de Atividade :alarm_clock:')
- .setThumbnail('https://i.imgur.com/WZMylbw.gif')
- .setDescription(`**Estou online há:** \n` + `:calendar_spiral: ${uptime}`);
+ .setTitle('\<:coroabanner:745286346238591018> | Tempo de Atividade')
+ .setDescription(`\<:Ping:745286342786809956> | **Estou online há:** \n` + `${uptime}`);
 
  message.reply(embed);
 

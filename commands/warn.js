@@ -15,8 +15,6 @@ exports.run = async (client, message, args) => {
   .addField(`:bookmark: **Permissão**`, `\`MANAGE_MESSAGES\``)
   .setColor('#8c0046') 
 
-    var canal = client.channels.cache.get('712451499564728380'); // Puxando o canal aonde iremos enviar que o usuário tomou um warn
-   // Requisitando a permissão de Administrador
     if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(`apenas administradores podem utilizar esse comando!`)
     // Puxando o usuário que iremos dar o Warn
     var membro = message.mentions.members.first() || message.guild.members.cache.get(args[0]); // puxando do argumento zero (0)
@@ -48,18 +46,17 @@ exports.run = async (client, message, args) => {
     .addField("Quantia de Avisos:", warns[membro.id].warns)
     .addField("Motivo do Aviso:", motivo)
     .setColor("#8B0000")
-    .setDescription(`**${membro.user.username}** tomou um **Warn** de **${message.author.username}**!\n\n`)
+    .setDescription(`**${membro.user.username}** foi avisado por **${message.author.username}**!\n\n`)
     // Enviando no privado do usuário
     let embed = new Discord.MessageEmbed()
 
-    .setTitle(`:warning: Warn`)
-    .setDescription(`${motivo}`)
-    .setFooter(`Aviso dado pelo Staff: ${message.author.username}`)
+    .setTitle(`\<:aviso1:745286341339906049> | Você foi alertado!`)
+    .setDescription(`\<:seta1:745286347723374672> ${motivo}`)
+    .setFooter(`Autor: ${message.author.username}`)
 
     //
     membro.send(embed); // Enviando pro usuário
-    canal.send(embedi); // Enviando no canal
-    message.channel.send(`warn enviado com sucesso! :thumbsup:`)
+    message.channel.send(`\<:coranteverde:745286344669921340> | Warn enviado com sucesso!`)
     message.delete();
 
     if(warns[membro.id].warns == 1) {
@@ -82,7 +79,7 @@ exports.run = async (client, message, args) => {
 
       setTimeout(function() {
         membro.roles.remove("717195788530221059")
-        message.channel.reply(`<@${membro.id}> Foi desmutado.`)
+        message.channel.reply(`\<:tick:745286349128597645> | <@${membro.id}> Foi desmutado.`)
       }, ms(mutetime))
 
       setTimeout(function() {
@@ -96,17 +93,21 @@ exports.run = async (client, message, args) => {
     if(warns[membro.id].warns == 3) {
       let embedi = new Discord.MessageEmbed()
 
-        .setTitle(`:warning: BaNiDo :warning:`)
-        .setFooter(`Você foi banido do ImpérioGeek pelo Staff: ${message.author.username}, Tenha um bom dia!`)
+        .setTitle(`:warning: G-Force Community`)
+        .setFooter(`\<:seta1:745286347723374672> | Você foi banido da G-Force Community por ${message.author.username}`)
       
-      await membro.send(embedi)
+      await membro.send(embed)
       message.guild.member(membro).ban(motivo);
-      membro.send('Você foi banido do ImpérioGeek, Tenha um bom dia!')
-      canal.send(`<@${membro.id}> foi banido por Levar 3 Avisos.`)
+      membro.send('Você foi banido da G-Force Community')
+      canal.send(`<@${membro.id}> foi banido.`)
+
+      message.channel.bulkDelete(1)
+      .then(messages => console.log(`${messages.size} mensagems foram apagadas`))
+      .catch(console.error)
     }
 }
 
 exports.help = {
     name: 'warn',
-      aliases: ['warn', 'aviso']
+      aliases: ['warn', 'alertar']
 }

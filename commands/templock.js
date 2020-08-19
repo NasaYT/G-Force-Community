@@ -19,7 +19,11 @@ exports.run = async (client, message, args) => {
             !args[0].endsWith("s")
           )
             return message.channel.send(
-              `Formato de tempo incorreto use s - para segundos, m - para minutos e h - para horas!`
+              `\<:fechar:745286345361981482> | Você precisa colocar um tempo válido!
+              s = segundo(s)
+              m = minuto(s)
+              h = hora(s)
+              d = dia(s)`
             );
         if (isNaN(args[0][0])) return message.channel.send(erro);
 

@@ -3,13 +3,13 @@ const Discord = require('discord.js'); // puxando a livraria 'discord.js'
 exports.run = (client, message, args) => { // setando a base
 // avisando sobre a embed de ajuda na DM
   
-    message.reply('`Verifique a sua DM.`')
+    message.channel.send('\<:notificacao:745286344615395428> | Verifique a sua DM.')
 
 
      const embed = new Discord.MessageEmbed()
         .setTitle(`CENTRAL DE AJUDA!`)
         .setColor("GOLD")
-        .setDescription('Para ter mais acesso e facilidade às nossas dependências, reaja com algum emoji e receba as informações necessárias. \n\n\n🤖 `Bot` \n🔨 `Moderação` \n🔧 `Uteis` \n💳 `Entretenimento`')
+        .setDescription('\<:livro:745286345634742382> | Veja os comandos da G-Force Community por categorias, só basta clicar em um emoji! \n\n\n🤖 `Bot` \n🔨 `Moderação` \n🔧 `Uteis` \n💳 `Entretenimento`')
     message.author.send({embed}).then(msg => { // evento para reagir a mensagem
             msg.react('🤖').then(r => { // bot
             msg.react('🔨').then(r => { // mod
@@ -39,6 +39,7 @@ exports.run = (client, message, args) => { // setando a base
           .setTitle('🤖 BOT')
           .addField(`\`/botinfo\``, `Saiba mais sobre mim`)
           .addField(`\`/setprefix\``, `Troque o prefixo do bot`)
+          .addField(`\`/changelog\``, `Veja oque há de novo no bot`)
           
           msg.edit(embed)
         }) 
@@ -48,10 +49,8 @@ exports.run = (client, message, args) => { // setando a base
                 .setTitle("🔧 ÚTEIS")
                 .addField(`\`/userinfo\``, `Use i!userinfo @NomeDeAlguém para informações`)
                 .addField(`\`/serverinfo\``, `Use para saber informações do servidor`)
-                .addField(`\`/clima\``, `Veja o clima de alguma cidade`)
                 .addField(`\`/lembrete\``, `Peça ajuda ao bot para lembrar você de algo`)
                 .addField(`\`/ontime\``, `Veja a quanto tempo o bot se encontra online`)
-                .addField(`\`/sugestão\``, `Deixe uma sugestão para o nosso servidor`)
                 .addField(`\`/calculo\``, `Faça o calculo de uma conta`)
                 .addField(`\`/ticket\``, `Crie um chat direto com os staffs`)
 
@@ -64,14 +63,17 @@ exports.run = (client, message, args) => { // setando a base
             const embed = new Discord.MessageEmbed()
                 .setTitle("👮 MODERAÇÃO")
                 .addField(`\`/ban\``, `Aplique um banimento em um pessoa`)
+                .addField(`\`/unban\``, `Desbane um usuário`)
                 .addField(`\`/mute\``, `Use para mutar uma pessoa`)
                 .addField(`\`/unmute\``, `Use para desmutar uma pessoa`)
                 .addField(`\`/templock\``, `Bloqueie algum chat por um tempo determinado`)
                 .addField(`\`/clear\``, `Limpe indesejadas mensagens em um canal`)
                 .addField(`\`/warn\``, `Use para dar um aviso a um usuário`)
-                .addField(`\`/warnstaff\``, `Use para dar um aviso na staff`)
                 .addField(`\`/anuncio\``, `Use para anunciar algo com o bot`)
                 .addField(`\`/sorteio\``, `Use para sortear algo com o bot`)
+                .addField(`\`/unlock\``, `Desbloqueie um chat`)
+                .addField(`\`/lock\``, `Bloqueie o chat`)
+                .addField(`\`/aviso\``, `Dê um aviso para o servidor todo`)
                 .setColor("GOLD")
             msg.edit(embed);
         })
@@ -79,16 +81,19 @@ exports.run = (client, message, args) => { // setando a base
         Entretenimento.on('collect', r2 => {
             const embed = new Discord.MessageEmbed()
                 .setTitle("❤ ENTRETENIMENTO")
-                .addField(`\`/say\``, `Fale pelo bot`)
+                .addField(`\`/falar\``, `Fale pelo bot`)
                 .addField(`\`/roleta\``, `Jogue Roleta Russa`)
                 .addField(`\`/ppt\``, `Jogue Pedra Papel e Tesoura`)
-                .addField(`\`/ping\``, `Use para descobrir seu ping`)
                 .addField(`\`/laranjo\``, `Faça seu meme do Laranjo`)
+                .addField(`\`/pediravatar\``, `Peça um avatar ao bot`)
                 .addField(`\`/dado\``, `Jogue um dado 1d10`)
                 .addField(`\`/avatar\``, `Baixe o avatar de alguém`)
                 .addField(`\`/pergunta\``, `Me faça uma pergunta`)
                 .addField(`\`/tapa\``, `De um tapa em alguém`)
                 .addField(`\`/abraçar\``, `Abraçe alguém`)
+                .addField(`\`/foxgirl\``, `Peça uma imagem de Menina-lobo`)
+                .addField(`\`/neko\``, `Peça uma imagem de Neko`)
+                .addField(`\`/ngif\``, `Peça um gif de Neko`)
                 .addField(`\`/cocega\``, `Faça cócegas em alguém`)
                 .addField(`\`/beijo\``, `De um beijo em alguém`)
                 .addField(`\`/cafuné\``, `De um cafuné em alguém`)
@@ -107,7 +112,7 @@ exports.run = (client, message, args) => { // setando a base
             const embed = new Discord.MessageEmbed()
         .setTitle(`CENTRAL DE AJUDA!`)
         .setColor("GOLD")
-        .setDescription('Para ter mais acesso e facilidade às nossas dependências, reaja com algum emoji e receba as informações necessárias. \n\n\n🤖 `Bot` \n🔨 `Moderação` \n🔧 `Uteis` \n💳 `Entretenimento`')
+        .setDescription('\<:livro:745286345634742382> | Veja os comandos da G-Force Community por categorias, só basta clicar em um emoji! \n\n\n🤖 `Bot` \n🔨 `Moderação` \n🔧 `Uteis` \n💳 `Entretenimento`')
             
            msg.edit(embed);  
         });
@@ -116,5 +121,5 @@ exports.run = (client, message, args) => { // setando a base
 
 exports.help = {
     name: 'ajuda',
-    aliases: ['ajuda', 'help']
+    aliases: ['ajuda', 'help', 'comandos']
 }

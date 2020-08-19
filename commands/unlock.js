@@ -9,7 +9,7 @@ exports.run = async (client, message, args) => {
                 SEND_MESSAGES: true
               })
 
-              message.channel.send(` :unlock: | O envio de mensagem desde canal foi habilitado.`);
+              message.channel.send(` \<:coranteverde:745286344669921340> | O envio de mensagem desde canal foi habilitado.`);
 }
 
 exports.help = {

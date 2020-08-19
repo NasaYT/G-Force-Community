@@ -62,10 +62,10 @@ exports.run = (client, message, args) => {
         .setAuthor(`${member.user.username}`, member.user.displayAvatarURL())
         .setColor('#0000')
         .setThumbnail(member.user.displayAvatarURL())
-        .addField('Entrou aqui em',`\`${moment(member.joinedAt).format("LLL")}\``)
-        .addField("Conta criada em",`\`${moment(member.user.createdAt).format("LLL")}\``, true)
-        .addField("Permissões", `${permissions.join(', ')}`)
-        .addField(`Cargos [${member.roles.cache.filter(r => r.id !== message.guild.id).map(a => `\`${a.name}\``).length}]`,`${member.roles.cache.filter(r => r.id !== message.guild.id).map(roles => `<@&${roles.id }>`).join(', ') || "Esse membro não possui cargos."}`, true)
+        .addField('\<:ouro:745286344179318814> | Entrou aqui em',`\`${moment(member.joinedAt).format("LLL")}\``)
+        .addField("\<:blaze:745286343239794688> | Conta criada em",`\`${moment(member.user.createdAt).format("LLL")}\``, true)
+        .addField("\<:coroabanner:745286346238591018> | Permissões", `${permissions.join(', ')}`)
+        .addField(`\<:coroa1:745286345496199228> | Cargos [${member.roles.cache.filter(r => r.id !== message.guild.id).map(a => `\`${a.name}\``).length}]`,`${member.roles.cache.filter(r => r.id !== message.guild.id).map(roles => `<@&${roles.id }>`).join(', ') || "Esse membro não possui cargos."}`, true)
 
     message.channel.send({embed}).then(msg => { // um evento de reacao para fazermos adicionar outra embed (assim fica legal :3)
         msg.react("👉")
@@ -80,9 +80,9 @@ exports.run = (client, message, args) => {
 
             let emb = new Discord.MessageEmbed()
 
-            .addField("Jogando", `${member.user.presence.game ? `${member.user.presence.game.name}` : "Nenhum jogo detectado"}`)
-            .addField("Status",`${status[member.user.presence.status]}`)
-            .addField("Tag", `#${member.user.discriminator}`)
+            .addField("\<:foguete1:745286344862859315> | Jogando", `${member.user.presence.game ? `${member.user.presence.game.name}` : "Nenhum jogo detectado"}`)
+            .addField("\<:Ping:745286342786809956> | Status",`${status[member.user.presence.status]}`)
+            .addField("\<:cartao:745701297507794951> | Tag", `#${member.user.discriminator}`)
             .setThumbnail(member.user.displayAvatarURL())
             .setColor('#0000')
 

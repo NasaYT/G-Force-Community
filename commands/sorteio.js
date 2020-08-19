@@ -18,32 +18,31 @@ exports.run = async (client, message, args) => {
       !args[0].endsWith("m")
     )
       return message.channel.send(
-        `Formato de tempo incorreto use d - para dias, h - para horas e m - para minutos!`
+        `\<:exclamacao:745286346641375283> | O tempo definido tem que ser maior que 1 minuto!\ns = segundo(s)\nm = minuto(s)\nh = hora(s\nd = dia(s)`
       );
     if (isNaN(args[0][0])) return message.channel.send(erro);
     let channel = message.mentions.channels.first();
     if (!channel)
       return message.channel.send(
-        `Canal não encontrado por favor use: i!sorteio tempo #canal premio`
+        `\<:fechar:745286345361981482> | O canal mencionado não foi encontrado!`
       );
     let prize = args.slice(2).join(" ");
-    if (!prize) return message.channel.send(`Premio não especificado!`);
+    if (!prize) return message.channel.send(`\<:exclamacao:745286346641375283> | Prêmio não especificado!`);
     message.channel.send(`*Sorteio criado em ${channel}*`);
     let Embed = new MessageEmbed()
       .setTitle(`Novo Sorteio!`)
       .setDescription(
-        `Reaja com :tada: para entrar!\n` + `Tempo restante: ${args[0]}\n` + `Hospedado por ${message.author}\n` + `Prêmio **${prize}**`
+        `\<:esmeralda:745286344900870395> | Reaja com :tada: para entrar!\n` + `Tempo restante: ${args[0]}\n` + `Sorteio iniciado por ${message.author}\n` + `\nPrêmio: **${prize}**`
       )
       .setTimestamp(Date.now() + ms(args[0]))
       .setColor(`BLUE`);
-      channel.send('@everyone');
     let m = await channel.send(Embed);
     m.react("🎉");
     setTimeout(() => {
       if (m.reactions.cache.get("🎉").count <= 1) {
         message.channel.send(`Reações: ${m.reactions.cache.get("🎉").count}`);
         return message.channel.send(
-          `Sem pessoas suficientes!`
+          `\<:fechar:745286345361981482> | O sorteio foi cancelado pois não havia pessoas suficiente!`
         );
       }
 
@@ -52,7 +51,7 @@ exports.run = async (client, message, args) => {
         .users.cache.filter((u) => !u.bot)
         .random();
       channel.send(
-        `O Ganhador do sorteio **${prize}** foi... ${winner}`
+        `\<:seta1:745286347723374672> | O Ganhador do sorteio **${prize}** foi **${winner}**`
       );
     }, ms(args[0]));
   }

@@ -14,12 +14,12 @@ exports.run = (bot, message, args, db) => {
     "/",
     "**"
     ]
- if (args[0] == null || args[0] == undefined) return message.reply("não foi inserido nenhum número/operador")
- if (!operadores.includes(args[1])) return message.reply("Esse operador é inválido \npara ver os operadores utilize `calculo operadores`")
+ if (args[0] == null || args[0] == undefined) return message.reply("\<:exclamacao:745286346641375283> | não foi inserido nenhum número/operador")
+ if (!operadores.includes(args[1])) return message.reply("\<:exclamacao:745286346641375283> | Esse operador é inválido \npara ver os operadores utilize `calculo operadores`")
 if (isNaN(args[0]) || isNaN(args[2])) return message.channel.send("`" + args[0] + "` ou `" + args[2] + "` não foi reconhecido como número")
 //message.channel.send(eval(args.join(" ")))
   let embed = {
-  title: "Aqui está o resultado !!",
+  title: "\<:coranteverde:745286344669921340> | Aqui está o resultado",
   description: eval(args.join(" ")),
   color: 0x696969,
   thumbnail: {
