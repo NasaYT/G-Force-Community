@@ -23,7 +23,7 @@ exports.run = async (client, message, args) => {
     if(!reason) reason = "\<:exclamacao:745286346641375283> | Razão não fornecida";
   
   const embed = new Discord.MessageEmbed()
-
+        await member.ban(reason)
         .setTitle(`:warning: G-Force Community`)
         .setFooter(`\<:seta1:745286347723374672> | Você foi banido da G-Force Community por ${message.author.username}`)
   
