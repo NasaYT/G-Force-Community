@@ -34,9 +34,7 @@ exports.run = async (client, message, args) => {
                 .addField("\<:diploma:745286344980561981> Motivo:", reason, true)
                 .addField('\<:livro:745286345634742382> Data do desmutamento:', message.createdAt.toLocaleString())
                 
-                client.channels.cache.get('697952134167003237').send(embed)
-    
-                user.send(`\<:tick:745286349128597645> | Você foi desmutado do **${message.guild.name}**`)
+                message.channel.send(embed);
         }
 
 exports.help = {
