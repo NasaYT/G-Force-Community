@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 
 exports.run = (client, message, args) => {
 
-    let date = client.user.createdAt
     let embed = new Discord.MessageEmbed()
     .setColor([28, 255, 103])
     .setAuthor("Informação do Bot") // message.author.avatarURL - Pegar do usuário que digitou o cmd
@@ -13,27 +12,11 @@ exports.run = (client, message, args) => {
     .addField(":wrench: Versão do bot", "2.0.2", true)
     .addField(":flag_br: País", "Brasil", true)
     .addField(":books: Tipo", "discord.js", true)
-    //.addField("Criado em", ":inbox_tray: " + client.user.createdAt, true)
-    .addField(':inbox_tray: Criado em', + formatDate('DD/MM/YYYY, às HH:mm:ss', date))
     .setFooter(client.user.username, client.user.displayAvatarURL()) // para pegar o bot name: client.user.username
     // sendo message.author | client.user / pega o id do author e o id do bot
     .setTimestamp();
     
     message.channel.send(embed);
-  
-    /**
- * Formata a data passada para o padrão do Brasil.
- * @param {string} template
- * @param {Date=} [date]
- * @return {string}
- */
-function formatDate (template, date) {
-  var specs = 'YYYY:MM:DD:HH:mm:ss'.split(':')
-  date = new Date(date || Date.now() - new Date().getTimezoneOffset() * 6e4)
-  return date.toISOString().split(/[-:.TZ]/).reduce(function (template, item, i) {
-    return template.split(specs[i]).join(item)
-  }, template)
-  }
 }
 
 exports.help = {
