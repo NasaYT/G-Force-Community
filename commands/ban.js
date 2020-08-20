@@ -23,16 +23,16 @@ exports.run = async (client, message, args) => {
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "\<:exclamacao:745286346641375283> | Razão não fornecida";
   
-  let embed = new Discord.MessageEmbed()
+  const embedi = new Discord.MessageEmbed()
 
         .setTitle(`:warning: G-Force Community`)
         .setFooter(`\<:seta1:745286347723374672> | Você foi banido da G-Force Community por ${message.author.username}`)
       
-    await member.send(embed)
+    await member.send(embedi)
     await member.ban(reason)
       .catch(error => message.reply(`\<:notificacao:745286344615395428> | Não consegui banir o usuário mencionado: ${error}`));
   
-      let embed = new Discord.MessageEmbed()
+      const embed = new Discord.MessageEmbed()
         .setTitle("🚫 G-Force Community 🚫", message.author.avatarURL)
         .setThumbnail(message.author.avatarURL)
         .addField("📋Staff Tag", message.author, true)
