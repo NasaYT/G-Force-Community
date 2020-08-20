@@ -64,7 +64,6 @@ exports.run = (client, message, args) => {
         .setThumbnail(member.user.displayAvatarURL())
         .addField('\<:ouro:745286344179318814> | Entrou aqui em',`\`${moment(member.joinedAt).format("LLL")}\``)
         .addField("\<:blaze:745286343239794688> | Conta criada em",`\`${moment(member.user.createdAt).format("LLL")}\``, true)
-        .addField("\<:coroabanner:745286346238591018> | Permissões", `${permissions.join(', ')}`)
         .addField(`\<:coroa1:745286345496199228> | Cargos [${member.roles.cache.filter(r => r.id !== message.guild.id).map(a => `\`${a.name}\``).length}]`,`${member.roles.cache.filter(r => r.id !== message.guild.id).map(roles => `<@&${roles.id }>`).join(', ') || "Esse membro não possui cargos."}`, true)
 
     message.channel.send({embed}).then(msg => { // um evento de reacao para fazermos adicionar outra embed (assim fica legal :3)
