@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-moment.locale('pt-BR')
+locale('pt-BR')
 
 exports.run = async (client, message, args) => {
     if (!message.member.hasPermission("MANAGE_ROLES")) {
