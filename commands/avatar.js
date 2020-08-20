@@ -6,7 +6,7 @@ exports.run = async (client, message, args) => {
     let embed = new Discord.MessageEmbed()
 
     .setColor('#36393e')
-    .setTitle(`🖼️ ${member.username}`)
+    .setTitle(`🖼️ Avatar de ${member.username}`)
     .setDescription("**Clique [aqui](" + member.displayAvatarURL({format: 'png', dynamic: true, size: 1024}) + ") para baixar a imagem!**")
     .setImage(member.avatarURL({format: 'png', dynamic: true, size: 1024}))
 
