@@ -32,7 +32,7 @@ exports.run = async (client, message, args) => {
     let Embed = new MessageEmbed()
       .setTitle(`Novo Sorteio!`)
       .setDescription(
-        `\<:esmeralda:745286344900870395> | Reaja com :tada: para entrar!\n` + `Tempo restante: ${args[0]}\n` + `Sorteio iniciado por ${message.author}\n` + `\nPrêmio: **${prize}**`
+        `\<:esmeralda:745286344900870395> | Reaja com :tada: para entrar!\n\nSorteio iniciado por ${message.author}\nPrêmio: **${prize}**\nTempo restante: ${args[0]}`
       )
       .setTimestamp(Date.now() + ms(args[0]))
       .setColor(`BLUE`);
@@ -40,7 +40,6 @@ exports.run = async (client, message, args) => {
     m.react("🎉");
     setTimeout(() => {
       if (m.reactions.cache.get("🎉").count <= 1) {
-        message.channel.send(`Reações: ${m.reactions.cache.get("🎉").count}`);
         return message.channel.send(
           `\<:fechar:745286345361981482> | O sorteio foi cancelado pois não havia pessoas suficiente!`
         );

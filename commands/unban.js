@@ -9,12 +9,11 @@ exports.run = async (client, message, args) => {
     message.guild.members.unban(user)
 
     let embed = new Discord.MessageEmbed()
-        .setTitle("🚫 G-Force Community 🚫", message.author.avatarURL())
-        .setThumbnail(message.author.avatarURL())
-        .addField("🚨Membro Desbanido", `<@${args[0]}>`)
-        .addField("📝Motivo:", reason)
-        .addField('Data:', message.createdAt.toLocaleString())
-        .setColor("RANDOM").setTimestamp()
+    .setTitle("\<:notificacao:745286344615395428> G-Force Community", message.author.avatarURL)
+    .setThumbnail(message.author.avatarURL)
+    .addField("\<:notificacao:745286344615395428> Usuário Desbanido:", message.mentions.members.first(), false)
+    .addField("\<:diploma:745286344980561981> Motivo:", reason, true)
+    .addField('\<:livro:745286345634742382> Data do desbanimento:', message.createdAt.toLocaleString())
 
     message.channel.send(embed)
 }
