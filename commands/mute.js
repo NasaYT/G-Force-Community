@@ -1,5 +1,5 @@
 const Discord = require("discord.js")
-locale('pt-BR')
+moment.locale('pt-BR');
 
 exports.run = async (client, message, args) => {
 
