@@ -26,7 +26,8 @@ client.on("ready", () => {
   var tabela = [
     {name: '[LEAKS] G-Force Community - https://discord.gg/dyPAPG', type:'PLAYING'},
     {name: 'Criado por uGabriel#2193', type: 'LISTENING'},
-    {name: 'Veja meus comandos: ${prefix}ajuda', type: 'WATCHING'},
+    {name: 'Veja meus comandos: ajuda', type: 'WATCHING'},
+    {name: 'Estou observando ${client.users.cache.size} usuários em ${client.guilds.cache.size} servidores'},
     {name: 'Versão: 2.0.2'}
   ];
 
