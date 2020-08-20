@@ -6,8 +6,8 @@ exports.run = async (client, message, args) => {
 
   .setTitle(`❓ INFORMAÇÃO DO COMANDO`)
   .setDescription(`\`ban\` - Dê Ban em um usuário`)
-  .addField(`:hammer: **Uso**`, `\`${prefix}ban @nomedousuario motivo\``)
-  .addField(`:book: **Exemplo**`, `\`${prefix}ban @uGabriel#2193 lindao\``)
+  .addField(`:hammer: **Uso**`, `\`ban @nomedousuario motivo\``)
+  .addField(`:book: **Exemplo**`, `\`ban @uGabriel#2193 teste\``)
   .addField(`:bookmark: **Permissão**`, `\`BAN_MEMBERS\``)
   .setColor('#8c0046')   
 
