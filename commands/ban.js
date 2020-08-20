@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const c = require('../config.json')
 
 exports.run = async (client, message, args) => {
 
@@ -18,17 +17,17 @@ exports.run = async (client, message, args) => {
     let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
     if(!member)
       return message.reply(erro);
-    if(!member.bannable) 
+      if(!member.bannable)
       return message.reply("\<:fechar:745286345361981482> | Não tenho permissão para banir alguém superior a mim!");
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "\<:exclamacao:745286346641375283> | Razão não fornecida";
   
-  const embedi = new Discord.MessageEmbed()
+  const embed = new Discord.MessageEmbed()
 
         .setTitle(`:warning: G-Force Community`)
         .setFooter(`\<:seta1:745286347723374672> | Você foi banido da G-Force Community por ${message.author.username}`)
       
-    await member.send(embedi)
+    await member.send(embed)
     await member.ban(reason)
       .catch(error => message.reply(`\<:notificacao:745286344615395428> | Não consegui banir o usuário mencionado: ${error}`));
   
