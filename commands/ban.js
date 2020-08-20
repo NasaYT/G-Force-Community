@@ -31,7 +31,7 @@ exports.run = async (client, message, args) => {
     await member.ban(reason)
       .catch(error => message.reply(`\<:notificacao:745286344615395428> | Não consegui banir o usuário mencionado: ${error}`));
   
-      const embed = new Discord.MessageEmbed()
+      const embedi = new Discord.MessageEmbed()
         .setTitle("🚫 G-Force Community 🚫", message.author.avatarURL)
         .setThumbnail(message.author.avatarURL)
         .addField("📋Staff Tag", message.author, true)
@@ -39,7 +39,7 @@ exports.run = async (client, message, args) => {
         .addField("📝Motivo:", reason, true)
         .setColor("RANDOM").setTimestamp()
       
-      client.channels.cache.get('745841974636052490').send(embed)
+      client.channels.cache.get('745841974636052490').send(embedi)
   }
 
   exports.help = {
