@@ -28,15 +28,13 @@ exports.run = async (client, message, args) => {
         user.roles.remove(muterole)
 
                 let embed = new Discord.MessageEmbed()
-                .setTitle("🚫 RD - Desmutar 🚫", message.author.avatarURL)
+                .setTitle("\<:notificacao:745286344615395428> G-Force Community", message.author.avatarURL)
                 .setThumbnail(message.author.avatarURL)
-                .addField("📋Staff Tag", message.author.tag, true)
-                .addField("Staff ID", message.author.id, false)
-                .addField("📋Membro Tag", message.mentions.members.first(), false)
-                .addField("Membro ID", message.mentions.members.first().id, false)
-                .setColor("RANDOM").setTimestamp()
+                .addField("\<:notificacao:745286344615395428> Usuário Desmutado:", message.mentions.members.first(), false)
+                .addField("\<:diploma:745286344980561981> Motivo:", reason, true)
+                .addField('\<:livro:745286345634742382> Data do desmutamento:', message.createdAt.toLocaleString())
                 
-                client.channels.cache.get('712451499564728380').send(embed)
+                client.channels.cache.get('697952134167003237').send(embed)
     
                 user.send(`\<:tick:745286349128597645> | Você foi desmutado do **${message.guild.name}**`)
         }
