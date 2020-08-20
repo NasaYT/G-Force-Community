@@ -26,10 +26,6 @@ exports.run = async (client, message, args) => {
 
         .setTitle(`:warning: G-Force Community`)
         .setFooter(`\<:seta1:745286347723374672> | Você foi banido da G-Force Community por ${message.author.username}`)
-      
-    await member.send(embed)
-    await member.ban(reason)
-      .catch(error => message.reply(`\<:notificacao:745286344615395428> | Não consegui banir o usuário mencionado: ${error}`));
   
       const embedi = new Discord.MessageEmbed()
         .setTitle("🚫 G-Force Community 🚫", message.author.avatarURL)
