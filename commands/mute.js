@@ -49,7 +49,7 @@ exports.run = async (client, message, args) => {
         .setThumbnail(message.author.avatarURL)
         .addField("\<:notificacao:745286344615395428> Usuário Mutado:", message.mentions.members.first(), false)
         .addField("\<:diploma:745286344980561981> Motivo:", reason, true)
-        .addField('\<:livro:745286345634742382> Data do banimento:', message.createdAt.toLocaleString())
+        .addField('\<:livro:745286345634742382> Data do mute:', message.createdAt.toLocaleString())
 
         client.channels.cache.get('697952134167003237').send(embed)
     
