@@ -53,7 +53,7 @@ exports.run = async (client, message, args) => {
 
         client.channels.cache.get('697952134167003237').send(embed)
     
-    user.send(`\<:aviso1:745286341339906049> | Você está mutado em **${message.guild.name}** Pela razão \`${reason}\``)
+    user.send(`\<:aviso1:745286341339906049> | Você está mutado em **${message.guild.name}**\nPela razão: \**${reason}\**`)
 }
 
 exports.help = {
