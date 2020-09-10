@@ -51,7 +51,7 @@ exports.run = async (client, message, args) => {
         .addField("\<:diploma:745286344980561981> Motivo:", reason, true)
         .addField('\<:livro:745286345634742382> Data do banimento:', message.createdAt.toLocaleString())
 
-        client.channels.cache.get('697952134167003237').send(embed)
+        client.channels.cache.get('753043469848805406').send(embed)
     
     user.send(`\<:aviso1:745286341339906049> | Você está mutado em **${message.guild.name}** Pela razão \`${reason}\``)
 }
