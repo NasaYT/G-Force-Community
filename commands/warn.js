@@ -93,12 +93,12 @@ exports.run = async (client, message, args) => {
     if(warns[membro.id].warns == 3) {
       let embedi = new Discord.MessageEmbed()
 
-        .setTitle(`:warning: G-Force Community`)
-        .setFooter(`\<:seta1:745286347723374672> | Você foi banido da G-Force Community por ${message.author.username}`)
+        .setTitle(`:warning: RedeHeasty`)
+        .setFooter(`\<:seta1:745286347723374672> | Você foi banido da RedeHeasty por ${message.author.username}`)
       
       await membro.send(embed)
       message.guild.member(membro).ban(motivo);
-      membro.send('Você foi banido da G-Force Community')
+      membro.send('Você foi banido da RedeHeasty')
       canal.send(`<@${membro.id}> foi banido.`)
 
       message.channel.bulkDelete(1)

@@ -18,7 +18,7 @@ exports.run = async (client, message, args) => {
         );
         }
 
-        let muterole = message.guild.roles.cache.find(x => x.name === "SILENCIADO")
+        let muterole = message.guild.roles.cache.find(x => x.name === "🚫・Silenciado")
     
     
     if(user.roles.cache.has(muterole)) {
@@ -28,7 +28,7 @@ exports.run = async (client, message, args) => {
         user.roles.remove(muterole)
 
                 let embed = new Discord.MessageEmbed()
-                .setTitle("\<:notificacao:745286344615395428> G-Force Community", message.author.avatarURL)
+                .setTitle("\<:notificacao:745286344615395428> RedeHeasty", message.author.avatarURL)
                 .setThumbnail(message.author.avatarURL)
                 .addField("\<:notificacao:745286344615395428> Usuário Desmutado:", message.mentions.members.first(), false)
                 .addField('\<:livro:745286345634742382> Data do desmutamento:', message.createdAt.toLocaleString())

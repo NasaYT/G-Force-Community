@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 const moment = require("moment");
-moment.locale('pt-BR') 
+moment.locale('pt-BR')
 
 exports.run = (client, message, args) => { 
     

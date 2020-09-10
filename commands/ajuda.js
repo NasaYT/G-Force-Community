@@ -9,7 +9,7 @@ exports.run = (client, message, args) => { // setando a base
      const embed = new Discord.MessageEmbed()
         .setTitle(`CENTRAL DE AJUDA!`)
         .setColor("GOLD")
-        .setDescription('\<:livro:745286345634742382> | Veja os comandos da G-Force Community por categorias, só basta clicar em um emoji! \n\n\n🤖 `Bot` \n🔨 `Moderação` \n🔧 `Uteis` \n💳 `Entretenimento`')
+        .setDescription('\<:livro:745286345634742382> | Veja os comandos da RedeHeasty por categorias, só basta clicar em um emoji! \n\n\n🤖 `Bot` \n🔨 `Moderação` \n🔧 `Uteis` \n💳 `Entretenimento`')
     message.author.send({embed}).then(msg => { // evento para reagir a mensagem
             msg.react('🤖').then(r => { // bot
             msg.react('🔨').then(r => { // mod
@@ -39,7 +39,6 @@ exports.run = (client, message, args) => { // setando a base
           .setTitle('🤖 BOT')
           .addField(`\`/botinfo\``, `Saiba mais sobre mim`)
           .addField(`\`/setprefix\``, `Troque o prefixo do bot`)
-          .addField(`\`/changelog\``, `Veja oque há de novo no bot`)
           
           msg.edit(embed)
         }) 
@@ -51,7 +50,6 @@ exports.run = (client, message, args) => { // setando a base
                 .addField(`\`/serverinfo\``, `Use para saber informações do servidor`)
                 .addField(`\`/lembrete\``, `Peça ajuda ao bot para lembrar você de algo`)
                 .addField(`\`/ontime\``, `Veja a quanto tempo o bot se encontra online`)
-                .addField(`\`/calculo\``, `Faça o calculo de uma conta`)
                 .addField(`\`/ticket\``, `Crie um chat direto com os staffs`)
 
                 .setColor("GOLD")
@@ -62,7 +60,6 @@ exports.run = (client, message, args) => { // setando a base
         Moderação.on('collect', r2 => {
             const embed = new Discord.MessageEmbed()
                 .setTitle("👮 MODERAÇÃO")
-                .addField(`\`/ban\``, `Aplique um banimento em um pessoa`)
                 .addField(`\`/unban\``, `Desbane um usuário`)
                 .addField(`\`/mute\``, `Use para mutar uma pessoa`)
                 .addField(`\`/unmute\``, `Use para desmutar uma pessoa`)
@@ -84,15 +81,11 @@ exports.run = (client, message, args) => { // setando a base
                 .addField(`\`/roleta\``, `Jogue Roleta Russa`)
                 .addField(`\`/ppt\``, `Jogue Pedra Papel e Tesoura`)
                 .addField(`\`/laranjo\``, `Faça seu meme do Laranjo`)
-                .addField(`\`/pediravatar\``, `Peça um avatar ao bot`)
                 .addField(`\`/dado\``, `Jogue um dado 1d10`)
                 .addField(`\`/avatar\``, `Baixe o avatar de alguém`)
                 .addField(`\`/pergunta\``, `Me faça uma pergunta`)
                 .addField(`\`/tapa\``, `De um tapa em alguém`)
                 .addField(`\`/abraçar\``, `Abraçe alguém`)
-                .addField(`\`/foxgirl\``, `Peça uma imagem de Menina-lobo`)
-                .addField(`\`/neko\``, `Peça uma imagem de Neko`)
-                .addField(`\`/ngif\``, `Peça um gif de Neko`)
                 .addField(`\`/cocega\``, `Faça cócegas em alguém`)
                 .addField(`\`/beijo\``, `De um beijo em alguém`)
                 .addField(`\`/cafuné\``, `De um cafuné em alguém`)
@@ -100,7 +93,6 @@ exports.run = (client, message, args) => { // setando a base
                 .addField(`\`/catucar\``, `De uma catucada em alguém`)
                 .addField(`\`/reverter\``, `Rerverter a frase`)
                 .addField(`\`/mchead\``, `Para pegar uma cabeça de minecraft`)
-                .addField(`\`/bigtext\``, `Para escrever em texto grande`)
                 .addField(`\`/firstword\``, `Fazer um meme de primeiras palavras`)
                 .setColor("GOLD")
 
@@ -111,7 +103,7 @@ exports.run = (client, message, args) => { // setando a base
             const embed = new Discord.MessageEmbed()
         .setTitle(`CENTRAL DE AJUDA!`)
         .setColor("GOLD")
-        .setDescription('\<:livro:745286345634742382> | Veja os comandos da G-Force Community por categorias, só basta clicar em um emoji! \n\n\n🤖 `Bot` \n🔨 `Moderação` \n🔧 `Uteis` \n💳 `Entretenimento`')
+        .setDescription('\<:livro:745286345634742382> | Veja os comandos da RedeHeasty por categorias, só basta clicar em um emoji! \n\n\n🤖 `Bot` \n🔨 `Moderação` \n🔧 `Uteis` \n💳 `Entretenimento`')
             
            msg.edit(embed);  
         });

@@ -19,7 +19,7 @@ exports.run = (client, message, args) => {
   } else { // Caso ele escreva, iremos enviar a sugestão para o canal
       let embed = new Discord.MessageEmbed()
         .setTitle(`ANÚNCIO`)
-        .setDescription(`:bust_in_silhouette: Autor: ${message.author}\n\n${sugestao}\n`)
+        .setDescription(`\:y_sininhobalansa: Autor: ${message.author}\n\n${sugestao}\n`)
         .setColor('RANDOM')
         .setThumbnail('https://images-ext-2.discordapp.net/external/tL5BVyen0UWHbm-_2prjaEpjBfWHWFz3qJG8TCsX6ig/https/i.imgur.com/wpn00zx.gif?width=645&height=645')
        
