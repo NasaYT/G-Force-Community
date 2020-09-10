@@ -28,8 +28,8 @@ client.on("ready", () => {
     {name: 'Criado por uGabriel#2020', type: 'LISTENING'},
     {name: 'Veja meus comandos: ajuda', type: 'WATCHING'},
     {name: 'Versão: 1.0.1'}
-    {name: 'IP: -/-', type: 'PLAYING'},
-  ];
+    {name: 'IP: Não definido'}
+];
 
   function setStatus() {
     var altstatus = tabela[Math.floor(Math.random() * tabela.length)]
