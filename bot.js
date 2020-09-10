@@ -24,10 +24,11 @@ client.on("ready", () => {
   //client.user.setActivity(`G-Force Community\nBy: uGabriel#2193`);
   //
   var tabela = [
-    {name: 'Rede Heasty', type:'PLAYING'},
+    {name: 'Rede Heasty - https://discord.gg/WVsC2PP', type:'PLAYING'},
     {name: 'Criado por uGabriel#2020', type: 'LISTENING'},
     {name: 'Veja meus comandos: ajuda', type: 'WATCHING'},
     {name: 'Versão: 1.0.1'}
+    {name: 'IP: -/-', type: 'PLAYING'},
   ];
 
   function setStatus() {
