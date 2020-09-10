@@ -24,10 +24,10 @@ client.on("ready", () => {
   //client.user.setActivity(`G-Force Community\nBy: uGabriel#2193`);
   //
   var tabela = [
-    {name: '[LEAKS] G-Force Community - https://discord.gg/dyPAPG', type:'PLAYING'},
-    {name: 'Criado por uGabriel#2193', type: 'LISTENING'},
+    {name: 'Rede Heasty', type:'PLAYING'},
+    {name: 'Criado por uGabriel#2020', type: 'LISTENING'},
     {name: 'Veja meus comandos: ajuda', type: 'WATCHING'},
-    {name: 'Versão: 2.0.2'}
+    {name: 'Versão: 1.0.1'}
   ];
 
   function setStatus() {
@@ -219,10 +219,10 @@ client.on('messageReactionAdd', async (reaction, user) => {
         let embed = new Discord.MessageEmbed()
         
         .setTitle(`\<:notificacao:745286344615395428> | ${membro.user.tag} **seja bem-vindo!**`) 
-        .setDescription(`\<:nitro:745286345366306976> | Olá, seja muito bem vindo(a) ao **G-Force Community**!`) 
+        .setDescription(`\<:nitro:745286345366306976> | Olá, seja muito bem vindo(a) a **Rede Heasty**!`) 
         .setThumbnail(membro.user.displayAvatarURL())
         .setColor('GREEN') 
-        .setFooter('G-Force Community • © Todos os direitos reservados.')
+        .setFooter('Rede Heasty • © Todos os direitos reservados.')
         //.addField(`**SOBRE**`, `:busts_in_silhouette: Usuários: \`${membro.guild.memberCount}\`\n<:DL_github:693136690801410178> Repositório: [Discord-Lab](https://github.com/young-js) \n<:DL_twitter:693132106255040671> Twitter: [@Discord_Lab](https://twitter.com/Discord_Lab)`)
         
         canal.send(embed)
@@ -282,12 +282,12 @@ client.on("messageReactionAdd", (reaction, user) => {
                         READ_MESSAGE_HISTORY: true
                     })
   
-                    chan.updateOverwrite(message.guild.roles.cache.find(x => x.name === "Moderador"), {
+                    chan.updateOverwrite(message.guild.roles.cache.find(x => x.name === "〔🔨〕- 〔Builder〕-〔🔨〕"), {
                         VIEW_CHANNEL: true,
                         SEND_MESSAGES: true
                     })
               
-                    chan.updateOverwrite(message.guild.roles.cache.find(s => s.name === "Ajudante"), {
+                    chan.updateOverwrite(message.guild.roles.cache.find(s => s.name === "〔📞〕- 〔Ajudante〕-〔📞〕"), {
                               VIEW_CHANNEL: true,
                               SEND_MESSAGES: true
                           })
@@ -304,7 +304,7 @@ client.on("messageReactionAdd", (reaction, user) => {
                   .setTitle("Ticket Suporte,")
                   .setColor("#cd3")
                   .setDescription("No ticket, você poderá conversar em particular com algum membro da equipe\nCom isso, você terá mais privacidade e poderá ficar a vontade!\n\nPara fechar um ticket, reaja em :unlock:")
-                  .setFooter("G-Force Community")
+                  .setFooter("Rede Heasty")
 
                   chan.send(embedTicketOpen).then( async msg => {
                       await msg.react("🔒")
