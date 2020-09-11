@@ -215,7 +215,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
   //
 
     client.on('guildMemberAdd', membro => {
-        var canal = client.channels.cache.get("697507836778905652");
+        var canal = client.channels.cache.get("753035714232582154");
         let embed = new Discord.MessageEmbed()
         
         .setTitle(`\<:notificacao:745286344615395428> | ${membro.user.tag} **seja bem-vindo!**`) 
