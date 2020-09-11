@@ -218,8 +218,8 @@ client.on('messageReactionAdd', async (reaction, user) => {
         var canal = client.channels.cache.get("753035714232582154");
         let embed = new Discord.MessageEmbed()
         
-        .setTitle(`\<:notificacao:745286344615395428> | ${membro.user.tag} **seja bem-vindo!**`) 
-        .setDescription(`\<:nitro:745286345366306976> | Olá, seja muito bem vindo(a) a **Rede Heasty**!`) 
+        .setTitle(`\<:notificacao:745286344615395428> | REDE HEASTY!**`) 
+        .setDescription(`\<:nitro:745286345366306976> | Olá ${membro.user.tag}, seja muito bem vindo(a) a **Rede Heasty**!\n\n**IP:** jogar-redeheasty.tk\n**Site:** -/-\n\nCaso esteja perdido, dê uma olhadinha no canal #📃・informações\nE evite ser punido, veja as regras no canal #🚫・regras`) 
         .setThumbnail(membro.user.displayAvatarURL())
         .setColor('GREEN') 
         .setFooter('Rede Heasty • © Todos os direitos reservados.')
@@ -325,7 +325,7 @@ client.on("messageReactionAdd", (reaction, user) => {
             let embedTicketClose = new Discord.MessageEmbed()
             .setTitle(`O Ticket ${message.channel.name} foi fechado`)
             .setColor("#cd3")
-            .setFooter("G-Force Community")
+            .setFooter("RedeHeasty")
 
             break;
         }
