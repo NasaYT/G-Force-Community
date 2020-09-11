@@ -218,8 +218,8 @@ client.on('messageReactionAdd', async (reaction, user) => {
         var canal = client.channels.cache.get("753035714232582154");
         let embed = new Discord.MessageEmbed()
         
-        .setTitle(`\<:notificacao:745286344615395428> | REDE HEASTY!**`) 
-        .setDescription(`\<:nitro:745286345366306976> | Olá ${membro.user.tag}, seja muito bem vindo(a) a **Rede Heasty**!\n\n**IP:** jogar-redeheasty.tk\n**Site:** -/-\n\nCaso esteja perdido, dê uma olhadinha no canal #📃・informações\nE evite ser punido, veja as regras no canal #🚫・regras`) 
+        .setTitle(`\<:notificacao:745286344615395428> | REDE HEASTY!`) 
+        .setDescription(`\<:nitro:745286345366306976> | Olá **${membro.user.tag}**, seja muito bem vindo(a) a **Rede Heasty**!\n\n**IP:** jogar-redeheasty.tk\n**Site:** -/-\n\nCaso esteja perdido, dê uma olhadinha no canal **#📃・informações** para obter mais informações sobre o servidor.\nE veja as regras no canal **#🚫・regras** para não ser punido no discord ou no servidor.`) 
         .setThumbnail(membro.user.displayAvatarURL())
         .setColor('GREEN') 
         .setFooter('Rede Heasty • © Todos os direitos reservados.')
