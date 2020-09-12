@@ -60,12 +60,8 @@ exports.run = (client, message, args) => { // setando a base
         Moderação.on('collect', r2 => {
             const embed = new Discord.MessageEmbed()
                 .setTitle("👮 MODERAÇÃO")
-                .addField(`\`/unban\``, `Desbane um usuário`)
-                .addField(`\`/mute\``, `Use para mutar uma pessoa`)
-                .addField(`\`/unmute\``, `Use para desmutar uma pessoa`)
                 .addField(`\`/templock\``, `Bloqueie algum chat por um tempo determinado`)
                 .addField(`\`/clear\``, `Limpe indesejadas mensagens em um canal`)
-                .addField(`\`/warn\``, `Use para dar um aviso a um usuário`)
                 .addField(`\`/anuncio\``, `Use para anunciar algo com o bot`)
                 .addField(`\`/unlock\``, `Desbloqueie um chat`)
                 .addField(`\`/lock\``, `Bloqueie o chat`)
