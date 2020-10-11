@@ -65,7 +65,6 @@ exports.run = (client, message, args) => { // setando a base
                 .addField(`\`/anuncio\``, `Use para anunciar algo com o bot`)
                 .addField(`\`/unlock\``, `Desbloqueie um chat`)
                 .addField(`\`/lock\``, `Bloqueie o chat`)
-                .addField(`\`/aviso\``, `Dê um aviso para o servidor todo`)
                 .setColor("GOLD")
             msg.edit(embed);
         })
