@@ -8,7 +8,7 @@ exports.run = async (client, message, args) => {
     .setColor("#cd3")
     .setAuthor(" TICKET")
     .setDescription("\<:notificacao:745286344615395428> | Confirme a criação do seu ticket clicando na reação abaixo.")
-    .setFooter("RedeHeasty - Ticket")
+    .setFooter("G-Force Community - Ticket")
 
     message.channel.send(TicketEmbed).then(async msg => {
         msg.react("🎟️")

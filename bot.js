@@ -24,9 +24,9 @@ client.on("ready", () => {
   //client.user.setActivity(`G-Force Community\nBy: uGabriel#2193`);
   //
   var tabela = [
-    {name: 'Rede Heasty - https://discord.gg/WVsC2PP', type:'PLAYING'},
-    {name: 'Criado por uGabriel#2020', type: 'LISTENING'},
-    {name: 'Veja meus comandos: ajuda', type: 'WATCHING'},
+    {name: 'G-Force Community 2.0 - https://discord.gg/RC5ZVmk', type:'PLAYING'},
+    {name: 'Criado por uGabrielDemon#2020', type: 'LISTENING'},
+    {name: '', type: 'WATCHING'},
     {name: 'Versão: 1.0.1'}
 ];
 
@@ -218,8 +218,8 @@ client.on('messageReactionAdd', async (reaction, user) => {
         var canal = client.channels.cache.get("753035714232582154");
         let embed = new Discord.MessageEmbed()
         
-        .setTitle(`\<:notificacao:745286344615395428> | REDE HEASTY!`) 
-        .setDescription(`\<:nitro:745286345366306976> | Olá **${membro.user.tag}**, seja muito bem vindo(a) a **Rede Heasty**!\n\n**IP:** jogar-redeheasty.tk\n**Site:** -/-\n\nCaso esteja perdido, dê uma olhadinha no canal **#📃・informações** para obter mais informações sobre o servidor.\nE veja as regras no canal **#🚫・regras** para não ser punido no discord ou no servidor.`) 
+        .setTitle(`\<:notificacao:745286344615395428> | G-Force Community`) 
+        .setDescription(`\<:nitro:745286345366306976> | Olá **${membro.user.tag}**, seja muito bem vindo(a) a **G-Force Community**!\nnCaso precise de ajuda com plugins, skript, mapas, servidores e etc, chame o @Ninja_Dark99#3659 ou alguém da equipe.`) 
         .setThumbnail(membro.user.displayAvatarURL())
         .setColor('GREEN') 
         .setFooter('Rede Heasty • © Todos os direitos reservados.')
@@ -304,7 +304,7 @@ client.on("messageReactionAdd", (reaction, user) => {
                   .setTitle("Ticket Suporte,")
                   .setColor("#cd3")
                   .setDescription("No ticket, você poderá conversar em particular com algum membro da equipe\nCom isso, você terá mais privacidade e poderá ficar a vontade!\n\nPara fechar um ticket, reaja em :unlock:")
-                  .setFooter("Rede Heasty")
+                  .setFooter("G-Force Community")
 
                   chan.send(embedTicketOpen).then( async msg => {
                       await msg.react("🔒")
@@ -325,7 +325,7 @@ client.on("messageReactionAdd", (reaction, user) => {
             let embedTicketClose = new Discord.MessageEmbed()
             .setTitle(`O Ticket ${message.channel.name} foi fechado`)
             .setColor("#cd3")
-            .setFooter("RedeHeasty")
+            .setFooter("G-Force Community")
 
             break;
         }

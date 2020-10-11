@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
     let embed = new Discord.MessageEmbed()
     .setColor([28, 255, 103])
     .setAuthor("Informação do Bot") // message.author.avatarURL - Pegar do usuário que digitou o cmd
-    .setDescription("\<:seta:745286344850276363> **Meu criador:** \n uGabriel#0001")
+    .setDescription("\<:seta:745286344850276363> **Meu criador:** \n uGabrielDemon#2020")
     .addField(":desktop: Servidores", + client.guilds.cache.size, true)
     .addField(":joystick: Usuários", + client.users.cache.size, true)
     .addField(":page_facing_up: Canais", + client.channels.cache.size, true)

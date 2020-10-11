@@ -9,7 +9,7 @@ exports.run = (client, message, args) => { // setando a base
      const embed = new Discord.MessageEmbed()
         .setTitle(`CENTRAL DE AJUDA!`)
         .setColor("GOLD")
-        .setDescription('\<:livro:745286345634742382> | Veja os comandos da RedeHeasty por categorias, só basta clicar em um emoji! \n\n\n🤖 `Bot` \n🔨 `Moderação` \n🔧 `Uteis` \n💳 `Entretenimento`')
+        .setDescription('\<:livro:745286345634742382> | Veja os comandos da G-Force Community por categorias, só basta clicar em um emoji! \n\n\n🤖 `Bot` \n🔨 `Moderação` \n🔧 `Uteis` \n💳 `Entretenimento`')
     message.author.send({embed}).then(msg => { // evento para reagir a mensagem
             msg.react('🤖').then(r => { // bot
             msg.react('🔨').then(r => { // mod
@@ -99,7 +99,7 @@ exports.run = (client, message, args) => { // setando a base
             const embed = new Discord.MessageEmbed()
         .setTitle(`CENTRAL DE AJUDA!`)
         .setColor("GOLD")
-        .setDescription('\<:livro:745286345634742382> | Veja os comandos da RedeHeasty por categorias, só basta clicar em um emoji! \n\n\n🤖 `Bot` \n🔨 `Moderação` \n🔧 `Uteis` \n💳 `Entretenimento`')
+        .setDescription('\<:livro:745286345634742382> | Veja os comandos da G-Force Community por categorias, só basta clicar em um emoji! \n\n\n🤖 `Bot` \n🔨 `Moderação` \n🔧 `Uteis` \n💳 `Entretenimento`')
             
            msg.edit(embed);  
         });
