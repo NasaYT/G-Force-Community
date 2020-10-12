@@ -219,7 +219,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
         let embed = new Discord.MessageEmbed()
         
         .setTitle(`\<:notificacao:745286344615395428> | G-Force Community`) 
-        .setDescription(`\<:nitro:745286345366306976> | Olá **${membro.user.tag}**, seja muito bem vindo(a) a **G-Force Community**!\nnCaso precise de ajuda com plugins, skript, mapas, servidores e etc, chame o @Ninja_Dark99#3659 ou alguém da equipe.`) 
+        .setDescription(`\<:nitro:745286345366306976> | Olá **${membro.user.tag}**, seja muito bem vindo(a) a **G-Force Community**!\n\nCaso precise de ajuda com plugins, skript, mapas, servidores e etc, chame o @Ninja_Dark99#3659 ou alguém da equipe.`) 
         .setThumbnail(membro.user.displayAvatarURL())
         .setColor('GREEN') 
         .setFooter('G-Force Community • © Todos os direitos reservados.')
