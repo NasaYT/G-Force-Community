@@ -215,14 +215,14 @@ client.on('messageReactionAdd', async (reaction, user) => {
   //
 
     client.on('guildMemberAdd', membro => {
-        var canal = client.channels.cache.get("753035714232582154");
+        var canal = client.channels.cache.get("753974403158769675");
         let embed = new Discord.MessageEmbed()
         
         .setTitle(`\<:notificacao:745286344615395428> | G-Force Community`) 
         .setDescription(`\<:nitro:745286345366306976> | Olá **${membro.user.tag}**, seja muito bem vindo(a) a **G-Force Community**!\nnCaso precise de ajuda com plugins, skript, mapas, servidores e etc, chame o @Ninja_Dark99#3659 ou alguém da equipe.`) 
         .setThumbnail(membro.user.displayAvatarURL())
         .setColor('GREEN') 
-        .setFooter('Rede Heasty • © Todos os direitos reservados.')
+        .setFooter('G-Force Community • © Todos os direitos reservados.')
         //.addField(`**SOBRE**`, `:busts_in_silhouette: Usuários: \`${membro.guild.memberCount}\`\n<:DL_github:693136690801410178> Repositório: [Discord-Lab](https://github.com/young-js) \n<:DL_twitter:693132106255040671> Twitter: [@Discord_Lab](https://twitter.com/Discord_Lab)`)
         
         canal.send(embed)
