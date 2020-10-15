@@ -21,7 +21,7 @@ arquivojs.forEach((f, i) => {
 //
 client.on("ready", () => {
   console.log(`Bot foi iniciado, com ${client.users.cache.size} usuários, em ${client.channels.cache.size} canais, em ${client.guilds.cache.size} servidores.`); 
-  //client.user.setActivity(`G-Force Community\nBy: uGabriel#2193`);
+  //client.user.setActivity(`G-Force Community\nBy: uGabrielDemon#2020`);
   //
   var tabela = [
     {name: 'G-Force Community 2.0 - https://discord.gg/RC5ZVmk', type:'PLAYING'},
@@ -218,8 +218,8 @@ client.on('messageReactionAdd', async (reaction, user) => {
         var canal = client.channels.cache.get("753974403158769675");
         let embed = new Discord.MessageEmbed()
         
-        .setTitle(`\<:notificacao:745286344615395428> | G-Force Community`) 
-        .setDescription(`\<:nitro:745286345366306976> | Olá **${membro.user.tag}**, seja muito bem vindo(a) a **G-Force Community**!\n\nCaso precise de ajuda com plugins, skript, mapas, servidores e etc, chame o @Ninja_Dark99#3659 ou alguém da equipe.`) 
+        .setTitle(`\<:BannerCoroa:745286346238591018> | G-Force Community`) 
+        .setDescription(`\<a:sino:752989230610776094> | Olá **${membro.user.tag}**, seja muito bem vindo(a) a **G-Force Community**!\n\n \<:mensagem:766086264734220349> Caso precise de ajuda com plugins, skript, mapas, servidores e etc, chame o uGabrielDemon#2020 ou alguém da equipe.\n \<:info:766085845945942018> Aqui você poderá pedir/encontrar plugins. skripts, servidores, bots, src, mapas e muito mais.\n \<:BannerCoracao:745286346188259445> Você também poderá dar umas risadas em #memes ou postar alguma foto/vídeo em #mídia`) 
         .setThumbnail(membro.user.displayAvatarURL())
         .setColor('GREEN') 
         .setFooter('G-Force Community • © Todos os direitos reservados.')
