@@ -12,6 +12,9 @@ let arquivojs = files.filter(f => f.split(".").pop() == "js");
 arquivojs.forEach((f, i) => {
   let props = require(`./commands/${f}`);
   console.log(`${f} - Comando iniciado`);
+  client.commands.set(props.help.name, props);
+  props.help.aliases.forEach(alias => {
+    client.aliases.set(alias, props.help.name);
   });
 });
 //
@@ -21,9 +24,8 @@ client.on("ready", () => {
   //
   var tabela = [
     {name: '[LEAKS] G-Force Community - https://discord.gg/dyPAPG', type:'PLAYING'},
-    {name: 'Criado por uGabriel#2193', type: 'LISTENING'},
-    {name: 'Veja meus comandos: ajuda', type: 'WATCHING'},
-    {name: 'Versão: 2.0.2'}
+    {name: 'Criado por uGabrielDemon#2020', type: 'LISTENING'},
+    {name: 'Versão: 2.0.3'}
   ];
 
   function setStatus() {
