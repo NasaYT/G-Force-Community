@@ -9,7 +9,7 @@ if (!args[0]) {
 } else if (content.length > 1000) {
   return message.channel.send(`${message.author.username}, forneça uma sugestão de no máximo 1000 caracteres.`);
 } else {
-  var canal = message.guild.channels.cache.find(ch => ch.id === "753974410272309278");
+  var canal = message.guild.channels.cache.find(ch => ch.id === "759444808455684117");
   const msg = await canal.send(
     new Discord.MessageEmbed()
     .setColor("#FFFFF1")
@@ -18,7 +18,7 @@ if (!args[0]) {
     .setFooter("ID do Autor: " + message.author.id)
     .setTimestamp()
   );
-  await message.channel.send(`\<a:boost:756877863613104202> | ${message.author}, sua sugestão foi enviada com sucesso!`);
+  await message.channel.send(`${message.author} sua sugestão foi enviada com sucesso!`);
 
   const emojis = ["✔️", "❎"];
 
@@ -28,5 +28,5 @@ if (!args[0]) {
 }
 }
 module.exports.help = {
-  name: ['sugerir', 'sugestao']
+  name: 'sugerir'
 }
