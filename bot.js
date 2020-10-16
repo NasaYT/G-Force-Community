@@ -17,17 +17,18 @@ arquivojs.forEach((f, i) => {
     client.aliases.set(alias, props.help.name);
   });
 });
+});
 //
 client.on("ready", () => {
   console.log(`Bot foi iniciado, com ${client.users.cache.size} usuários, em ${client.channels.cache.size} canais, em ${client.guilds.cache.size} servidores.`); 
-  //client.user.setActivity(`G-Force Community\nBy: uGabrielDemon#2020`);
+  //client.user.setActivity(`G-Force Community\nBy: uGabriel#2193`);
   //
   var tabela = [
-    {name: 'G-Force Community 2.0 - https://discord.gg/RC5ZVmk', type:'PLAYING'},
-    {name: 'Criado por uGabrielDemon#2020', type: 'LISTENING'},
-    {name: '', type: 'WATCHING'},
-    {name: 'Versão: 1.0.1'}
-];
+    {name: '[LEAKS] G-Force Community - https://discord.gg/dyPAPG', type:'PLAYING'},
+    {name: 'Criado por uGabriel#2193', type: 'LISTENING'},
+    {name: 'Veja meus comandos: ajuda', type: 'WATCHING'},
+    {name: 'Versão: 2.0.2'}
+  ];
 
   function setStatus() {
     var altstatus = tabela[Math.floor(Math.random() * tabela.length)]
@@ -214,7 +215,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
   //
 
     client.on('guildMemberAdd', membro => {
-        var canal = client.channels.cache.get("753974403158769675");
+        var canal = client.channels.cache.get("697507836778905652");
         let embed = new Discord.MessageEmbed()
         
         .setTitle(`\<:BannerCoroa:745286346238591018> | G-Force Community`) 
@@ -281,12 +282,12 @@ client.on("messageReactionAdd", (reaction, user) => {
                         READ_MESSAGE_HISTORY: true
                     })
   
-                    chan.updateOverwrite(message.guild.roles.cache.find(x => x.name === "〔🔨〕- 〔Builder〕-〔🔨〕"), {
+                    chan.updateOverwrite(message.guild.roles.cache.find(x => x.name === "Moderador"), {
                         VIEW_CHANNEL: true,
                         SEND_MESSAGES: true
                     })
               
-                    chan.updateOverwrite(message.guild.roles.cache.find(s => s.name === "〔📞〕- 〔Ajudante〕-〔📞〕"), {
+                    chan.updateOverwrite(message.guild.roles.cache.find(s => s.name === "Ajudante"), {
                               VIEW_CHANNEL: true,
                               SEND_MESSAGES: true
                           })
