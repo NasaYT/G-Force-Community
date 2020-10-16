@@ -12,7 +12,6 @@ let arquivojs = files.filter(f => f.split(".").pop() == "js");
 arquivojs.forEach((f, i) => {
   let props = require(`./commands/${f}`);
   console.log(`${f} - Comando iniciado`);
-  props.help.aliases.forEach(alias => {
     client.aliases.set(alias, props.help.name);
   });
 });
