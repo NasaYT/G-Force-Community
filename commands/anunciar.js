@@ -52,4 +52,5 @@ module.exports = {
 exports.help = {
   name: "aviso",
   aliases: ["aviso", "avisar"]
-};
+
+})
