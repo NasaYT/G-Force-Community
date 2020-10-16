@@ -17,6 +17,7 @@ arquivojs.forEach((f, i) => {
     client.aliases.set(alias, props.help.name);
   });
 });
+});
 //
 client.on("ready", () => {
   console.log(`Bot foi iniciado, com ${client.users.cache.size} usuários, em ${client.channels.cache.size} canais, em ${client.guilds.cache.size} servidores.`); 
