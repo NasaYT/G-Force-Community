@@ -15,15 +15,15 @@ module.exports = {
     baka.setAuthor(`${message.author.username}`, `${message.author.displayAvatarURL}`)
     baka.setTimestamp()
     baka.setColor(`RANDOM`)
-    baka.setDescription("<:super_keelta:636768010417340427> ``/anunciar`` \n\n**Fazer um anúncio no servidor.**\n\n<a:Think3D:637057613460406282> **Jeito de usar**: /anunciar `<texto>`")
-    baka.addField(`📗 Exemplos`, "`/anunciar Olá :)`")
+    baka.setDescription("Anuncie algo para várias pessoas, desse jeito você pode fazer uma mensagem estilosa!")
+    baka.addField(`📗 Exemplo`, "`/aviso Olá :)`")
     baka.setFooter(`Ações`, avatar1)
 
             if(!anuncio)  return message.reply(baka)
 
         let anuncioembed = new Discord.RichEmbed()
         anuncioembed.setColor("RANDOM")
-        anuncioembed.setDescription(`Ao usar **/anunciar**, você estará prestes a mencionar várias pessoas. Tem certeza?`)
+        anuncioembed.setDescription(`Ao usar **/aviso**, você estará prestes a mencionar várias pessoas. Tem certeza?`)
         anuncioembed.setFooter('Você tem 13s para concordar, ou exclua essa mensagem.')
         anuncioembed.setTimestamp();
 
@@ -47,8 +47,9 @@ module.exports = {
             msg.edit(anuncioembed)
             msg.edit('@everyone')
             c1.remove(message.author.id)
+};
 
-       })
-
-    })
-}}
+exports.help = {
+  name: "aviso",
+  aliases: ["aviso", "avisar"]
+};
