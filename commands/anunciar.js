@@ -47,8 +47,7 @@ module.exports = {
             msg.edit(anuncioembed)
             msg.edit('@everyone')
             c1.remove(message.author.id)
-    });
-}
+});
 
 exports.help = {
   name: "aviso",
