@@ -214,7 +214,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
   //
 
     client.on('guildMemberAdd', membro => {
-        var canal = client.channels.cache.get("697507836778905652");
+        var canal = client.channels.cache.get("753974403158769675");
         let embed = new Discord.MessageEmbed()
         
         .setTitle(`\<:BannerCoroa:745286346238591018> | G-Force Community`) 
