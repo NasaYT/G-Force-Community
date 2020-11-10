@@ -46,7 +46,7 @@ exports.run = (client, message, args) => { // setando a base
         Utilidades.on('collect', r2 => { // criando um evento, caso o membro clique nessa reação, e todos são iguais!
             const embed = new Discord.MessageEmbed()
                 .setTitle("🔧 ÚTEIS")
-                .addField(`\`/userinfo\``, `Use i!userinfo @NomeDeAlguém para informações`)
+                .addField(`\`/userinfo\``, `Use para ver algumas informações do usuário mencionado`)
                 .addField(`\`/serverinfo\``, `Use para saber informações do servidor`)
                 .addField(`\`/lembrete\``, `Peça ajuda ao bot para lembrar você de algo`)
                 .addField(`\`/ontime\``, `Veja a quanto tempo o bot se encontra online`)
@@ -60,7 +60,6 @@ exports.run = (client, message, args) => { // setando a base
         Moderação.on('collect', r2 => {
             const embed = new Discord.MessageEmbed()
                 .setTitle("👮 MODERAÇÃO")
-                .addField(`\`/templock\``, `Bloqueie algum chat por um tempo determinado`)
                 .addField(`\`/clear\``, `Limpe indesejadas mensagens em um canal`)
                 .addField(`\`/anuncio\``, `Use para anunciar algo com o bot`)
                 .addField(`\`/unlock\``, `Desbloqueie um chat`)
