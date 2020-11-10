@@ -2,12 +2,15 @@ const request = require('snekfetch');
 
 exports.run = (client, message, args) => {
 
-    request.get('http://tnai.ml/sfw/hug').then(response => { 
-    console.log(response.body.url)
-});
-
+    const tnai = require('tnai'),
+    cli = new client(),
+    gif = cli.sfw.hug()
+    
+    console.log(gif)
 }
+
+
 exports.help = {
     name: 'nsfw',
-    aliases: []
-}
+    aliases: [""]
+  }
