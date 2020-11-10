@@ -12,6 +12,10 @@ let arquivojs = files.filter(f => f.split(".").pop() == "js");
 arquivojs.forEach((f, i) => {
   let props = require(`./commands/${f}`);
   console.log(`${f} - Comando iniciado`);
+  client.commands.set(props.help.name, props);
+  props.help.aliases.forEach(alias => {
+    client.aliases.set(alias, props.help.name);
+  });
 });
 });
 //
@@ -20,10 +24,11 @@ client.on("ready", () => {
   //client.user.setActivity(`G-Force Community\nBy: uGabriel#2193`);
   //
   var tabela = [
-    {name: '[LEAKS] G-Force Community - https://discord.gg/dyPAPG', type:'PLAYING'},
+    {name: 'G-Force Community 2.0 - https://discord.gg/RC5ZVmk', type:'PLAYING'},
     {name: 'Criado por uGabrielDemon#2020', type: 'LISTENING'},
-    {name: 'Versão: 2.0.3'}
-  ];
+    {name: '', type: 'WATCHING'},
+    {name: 'Versão: 1.0.1'}
+];
 
   function setStatus() {
     var altstatus = tabela[Math.floor(Math.random() * tabela.length)]
@@ -210,11 +215,11 @@ client.on('messageReactionAdd', async (reaction, user) => {
   //
 
     client.on('guildMemberAdd', membro => {
-        var canal = client.channels.cache.get("753974403158769675");
+        var canal = client.channels.cache.get("753035714232582154");
         let embed = new Discord.MessageEmbed()
         
-        .setTitle(`\<:BannerCoroa:745286346238591018> | G-Force Community`) 
-        .setDescription(`\<a:sino:752989230610776094> | Olá **${membro.user.tag}**, seja muito bem vindo(a) a **G-Force Community**!\n\n \<:mensagem:766086264734220349> Caso precise de ajuda com plugins, skript, mapas, servidores e etc, chame o uGabrielDemon#2020 ou alguém da equipe.\n \<:info:766085845945942018> Aqui você poderá pedir/encontrar plugins. skripts, servidores, bots, src, mapas e muito mais.\n \<:BannerCoracao:745286346188259445> Você também poderá dar umas risadas em #memes ou postar alguma foto/vídeo em #mídia`) 
+        .setTitle(`\<:notificacao:745286344615395428> | G-Force Community`) 
+        .setDescription(`\<:nitro:745286345366306976> | Olá **${membro.user.tag}**, seja muito bem vindo(a) a **G-Force Community**!\n\nCaso precise de ajuda com plugins, skript, mapas, servidores e etc, chame o @Ninja_Dark99#3659 ou alguém da equipe.`) 
         .setThumbnail(membro.user.displayAvatarURL())
         .setColor('GREEN') 
         .setFooter('G-Force Community • © Todos os direitos reservados.')
@@ -277,12 +282,12 @@ client.on("messageReactionAdd", (reaction, user) => {
                         READ_MESSAGE_HISTORY: true
                     })
   
-                    chan.updateOverwrite(message.guild.roles.cache.find(x => x.name === "Moderador"), {
+                    chan.updateOverwrite(message.guild.roles.cache.find(x => x.name === "〔🔨〕- 〔Builder〕-〔🔨〕"), {
                         VIEW_CHANNEL: true,
                         SEND_MESSAGES: true
                     })
               
-                    chan.updateOverwrite(message.guild.roles.cache.find(s => s.name === "Ajudante"), {
+                    chan.updateOverwrite(message.guild.roles.cache.find(s => s.name === "〔📞〕- 〔Ajudante〕-〔📞〕"), {
                               VIEW_CHANNEL: true,
                               SEND_MESSAGES: true
                           })
