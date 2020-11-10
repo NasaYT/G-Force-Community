@@ -9,7 +9,7 @@ exports.run = async (client, message, args) => {
                 SEND_MESSAGES: false
               })
 
-              message.channel.send(` \<:corantevermelho:745286344481439884> | O envio de mensagem desde canal foi desabilitado.`);
+              message.channel.send(` \<:corantevermelho:745286344481439884> | O envio de mensagem deste canal foi desabilitado.`);
 }
 
 exports.help = {
