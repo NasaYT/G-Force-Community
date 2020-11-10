@@ -1,5 +1,5 @@
 const akaneko = require('akaneko');
-const akaneko = require('discord.js');
+const discord = require('discord.js');
  
 exports.run = (client, message, args) => { 
  
