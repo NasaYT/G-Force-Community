@@ -1,6 +1,6 @@
 const akaneko = require('akaneko');
  
-async function yourFunctionName() {
+exports.run = (client, message, args) => { 
  
   console.log("SFW Neko: " + await akaneko.neko());
  
@@ -12,10 +12,8 @@ async function yourFunctionName() {
   console.log("Maid: " + await akaneko.nsfw.maid());
   console.log("Hentai: " + await akaneko.nsfw.hentai());
 }
- 
-yourFunctionName();
 
 exports.help = {
     name: 'nsfw',
-    aliases: [""]
+    aliases: []
 }
