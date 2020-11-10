@@ -29,7 +29,7 @@ exports.run = async (client, message, args) => {
 
         message.channel.send(`🔒 | Chat bloqueado com sucesso por **${args[0]}**`)
 
-        let everyone = message.guild.roles.cache.find(x => x.name === "@everyone");
+        let everyone = message.guild.roles.cache.find(x => x.name === "Membro");
         message.channel.updateOverwrite(everyone, {
             SEND_MESSAGES: false
           })
