@@ -9,5 +9,5 @@ exports.run = (client, message, args) => {
 
 exports.help = {
     name: 'abrircaixa',
-    aliases: [caixaabrir]
+    aliases: []
   }
